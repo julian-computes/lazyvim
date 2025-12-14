@@ -4,3 +4,6 @@
 
 -- Save with Cmd-S
 vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+
+-- Close window with Ctrl-Q
+vim.keymap.set("n", "<C-q>", "<cmd>close<cr>", { desc = "Close Window" })

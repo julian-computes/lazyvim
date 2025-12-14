@@ -1,6 +1,29 @@
 return {
   "snacks.nvim",
+  keys = {
+    {
+      "<leader>/",
+      function()
+        Snacks.picker.grep({
+          hidden = true,
+          ignored = false,
+        })
+      end,
+      desc = "Grep",
+    },
+  },
   opts = {
+    picker = {
+      win = {
+        input = {
+          keys = {
+            -- Override Snacks half-page down behavior to restore the default vim behavior of clearing
+            -- input buffer from the cursor to the beginning of the line
+            ["<C-u>"] = false,
+          },
+        },
+      },
+    },
     dashboard = {
       preset = {
         pick = function(cmd, opts)

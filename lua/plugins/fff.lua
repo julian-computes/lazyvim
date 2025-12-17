@@ -8,6 +8,26 @@ return {
   -- No need to lazy-load with lazy.nvim.
   -- This plugin initializes itself lazily.
   lazy = false,
+  opts = {
+    keymaps = {
+      close = "<Esc>",
+      select = "<CR>",
+      select_split = "<C-s>",
+      select_vsplit = "<C-v>",
+      select_tab = "<C-t>",
+      -- you can assign multiple keys to any action
+      move_up = { "<Up>", "<C-p>" },
+      move_down = { "<Down>", "<C-n>" },
+      preview_scroll_up = "<C-b>",
+      preview_scroll_down = "<C-f>",
+      toggle_debug = "<F2>",
+      -- goes to the previous query in history
+      cycle_previous_query = "<C-Up>",
+      -- multi-select keymaps for quickfix
+      toggle_select = "<Tab>",
+      send_to_quickfix = "<C-q>",
+    },
+  },
   keys = {
     {
       "ff",

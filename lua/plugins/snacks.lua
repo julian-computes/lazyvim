@@ -20,6 +20,7 @@ return {
             -- Override Snacks half-page down behavior to restore the default vim behavior of clearing
             -- input buffer from the cursor to the beginning of the line
             ["<C-u>"] = false,
+            ["<Esc>"] = { "close", mode = { "i", "n" } },
           },
         },
       },
